@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/commonMarginSmall"
+        tools:context=".Perfil">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ReservesProdisConstraintBg"
+            android:background="@drawable/rounded_corners_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Titulo fragment -->
+            <TextView
+                android:id="@+id/titlePerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/perfil"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/title"
+                app:layout_constraintEnd_toStartOf="@+id/titleDni"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/titleDni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintBottom_toBottomOf="@+id/titlePerfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Separador -->
+            <View
+                android:id="@+id/separadorTitlePerfil"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/ReservesProdisWhiteSpacer"
+                app:layout_constraintTop_toBottomOf="@id/titlePerfil" />
+
+            <!-- TextView Nombre -->
+            <TextView
+                android:id="@+id/titleFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:layout_marginTop="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/fullName"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separadorTitlePerfil"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Input Nombre -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullNameTextInputLayout"
+                android:layout_width="@dimen/responsive"
+                android:layout_height="@dimen/commonHeight"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                app:boxStrokeColor="@color/white"
+                style="@style/ReservesProdisWhite"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleFullName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullNameTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_pencil"
+                    style="@style/ReservesProdisWhite"
+                    android:fontFamily="@font/asap_medium"
+                    android:inputType="textPersonName"
+                    android:paddingTop="@dimen/commonMarginSmall"
+                    app:layout_constraintTop_toBottomOf="@+id/titleFullName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextView Email -->
+            <TextView
+                android:id="@+id/titleEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/emailTextView"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fullNameTextInputLayout"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Input Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTextInputLayout"
+                android:layout_width="@dimen/responsive"
+                android:layout_height="@dimen/commonHeight"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                app:boxStrokeColor="@color/white"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    style="@style/ReservesProdisWhite"
+                    android:fontFamily="@font/asap_medium"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/commonMarginSmall"
+                    app:layout_constraintTop_toBottomOf="@+id/titleFullName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextView Teléfono -->
+            <TextView
+                android:id="@+id/titleTlf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/phone"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout" />
+
+            <!-- Input Teléfono -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlfTextInputLayout"
+                android:layout_width="@dimen/responsive"
+                android:layout_height="@dimen/commonHeight"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                app:boxStrokeColor="@color/white"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTlf">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tlfTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_pencil"
+                    android:fontFamily="@font/asap_medium"
+                    style="@style/ReservesProdisWhite"
+                    android:inputType="phone"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/commonMarginSmall"
+                    app:layout_constraintTop_toBottomOf="@+id/titleFullName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextView Servicio -->
+            <TextView
+                android:id="@+id/titleServicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/commonMarginSmall"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/services"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tlfTextInputLayout" />
+
+            <!-- Spinner Servicios -->
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ReservesProdisWhite"
+                android:foregroundGravity="right"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="@+id/titleServicio"
+                app:layout_constraintTop_toBottomOf="@+id/titleServicio" />
+
+            <!-- Imagen Usuario -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewUserImage"
+                android:layout_width="@dimen/avatar"
+                android:layout_height="@dimen/avatar"
+                android:layout_marginTop="@dimen/commonMarginSmall"
+                android:layout_marginEnd="@dimen/frgPadding"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tlfTextInputLayout"
+                card_view:cardElevation="@dimen/responsive">
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/default_avatar" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botón guardar cambios -->
+            <Button
+                android:id="@+id/guardarButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/responsive"
+                android:layout_marginTop="@dimen/commonMarginSmall"
+                android:background="@drawable/button"
+                android:fontFamily="@font/asap_medium"
+                android:gravity="center"
+                android:text="@string/saveChangesItem"
+                android:textAllCaps="false"
+                android:textSize="@dimen/subtitle"
+                style="@style/ReservesProdisGreenButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewUserImage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Botón cambiar contraseña -->
+        <Button
+            android:id="@+id/passwordButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/responsive"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:text="@string/changePassword"
+            android:textAllCaps="false"
+            android:textSize="@dimen/subtitle"
+            style="@style/ReservesProdisButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <!-- Botón Cerrar Sessión -->
+        <Button
+            android:id="@+id/logOutButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/responsive"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            android:background="@drawable/button"
+            android:enabled="true"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textSize="@dimen/subtitle"
+            style="@style/ReservesProdisRedButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

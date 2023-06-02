@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/transparent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="@dimen/responsive"
+        app:cardMaxElevation="@dimen/responsive"
+        app:cardPreventCornerOverlap="false"
+        app:elevation="@dimen/responsive">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/emailUser"
+                android:layout_width="@dimen/ls_avatar"
+                android:layout_height="match_parent"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/smallText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxAdmin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAdmin"
+                android:layout_width="@dimen/checkBox"
+                android:layout_height="@dimen/checkBox"
+                android:layout_marginEnd="@dimen/commonMargin"
+                style="@style/ReservesProdisWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxEnabled"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkboxEnabled"
+                android:layout_width="@dimen/checkBox"
+                android:layout_height="@dimen/checkBox"
+                android:layout_marginEnd="@dimen/commonMargin"
+                style="@style/ReservesProdisWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

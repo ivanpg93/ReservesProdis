@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/commonMarginSmall"
+        style="@style/ReservesProdisGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:cardCornerRadius="@dimen/roundedCorners">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardViewConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:padding="@dimen/commonMarginSmall">
+
+            <EditText
+                android:id="@+id/titleSalas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/quicksand_bold"
+                android:inputType="textPersonName"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/checkBox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardViewConstraint" />
+
+            <EditText
+                android:id="@+id/titleSalasNum"
+                android:layout_width="@dimen/frgPadding"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/quicksand_bold"
+                android:inputType="phone"
+                style="@style/ReservesProdisWhite"
+                android:textSize="@dimen/title"
+                app:layout_constraintEnd_toStartOf="@+id/plazasIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/plazasIcon"
+                android:layout_width="@dimen/iconWidthAndHeight"
+                android:layout_height="@dimen/iconWidthAndHeight"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/ic_user"
+                style="@style/ReservesProdisWhite"
+                app:layout_constraintEnd_toStartOf="@+id/collapsableIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/collapsableIcon"
+                android:layout_width="@dimen/frgPadding"
+                android:layout_height="@dimen/frgPadding"
+                android:background="@drawable/bg_spinner"
+                style="@style/ReservesProdisWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/collapsableIcon">
+
+                <View
+                    android:id="@+id/separador"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    style="@style/ReservesProdisWhiteSpacer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleSalas" />
+
+                <ImageView
+                    android:id="@+id/imagenSala"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ls_logoSize"
+                    android:layout_marginTop="@dimen/commonMarginSmall"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/separador" />
+
+                <Button
+                    android:id="@+id/reservarButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/frgPadding"
+                    android:layout_marginTop="@dimen/commonMarginSmall"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/asap_medium"
+                    android:gravity="center"
+                    android:letterSpacing="0"
+                    android:text="@string/reserveItem"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/prodis"
+                    android:textSize="@dimen/commonMargin"
+                    style="@style/ReservesProdisButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imagenSala" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/iconWidthAndHeight"
+                    android:layout_marginTop="@dimen/commonMarginSmall"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/guardarButton">
+
+                    <ImageView
+                        android:id="@+id/iconMouse"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ic_mouse"
+                        style="@style/ReservesProdisWhite" />
+
+                    <ImageView
+                        android:id="@+id/iconWifi"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="@dimen/commonMarginSmall"
+                        android:background="@drawable/ic_wifi"
+                        style="@style/ReservesProdisWhite" />
+
+                    <ImageView
+                        android:id="@+id/iconCoffe"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="@dimen/commonMarginSmall"
+                        android:background="@drawable/ic_coffe"
+                        style="@style/ReservesProdisWhite" />
+
+                    <ImageView
+                        android:id="@+id/iconBook"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="@dimen/commonMarginSmall"
+                        android:background="@drawable/ic_book"
+                        style="@style/ReservesProdisWhite" />
+
+                    <ImageView
+                        android:id="@+id/iconWc"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="@dimen/commonMarginSmall"
+                        android:background="@drawable/ic_wc"
+                        style="@style/ReservesProdisWhite" />
+
+                    <ImageView
+                        android:id="@+id/iconTools"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="@dimen/commonMarginSmall"
+                        android:background="@drawable/ic_tools"
+                        style="@style/ReservesProdisWhite" />
+
+                    <ImageView
+                        android:id="@+id/iconProjector"
+                        android:layout_width="@dimen/iconWidthAndHeight"
+                        android:layout_height="@dimen/iconWidthAndHeight"
+                        android:layout_marginRight="@dimen/commonMarginSmall"
+                        android:background="@drawable/ic_projector"
+                        style="@style/ReservesProdisWhite" />
+                </LinearLayout>
+
+                <!-- Descripción -->
+                <EditText
+                    android:id="@+id/descTextView"
+                    style="@style/ReservesProdisWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:gravity="top"
+                    android:maxLines="5"
+                    android:padding="5dp"
+                    android:background="@color/transparent"
+                    android:textSize="@dimen/smallText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <View
+                    android:id="@+id/separadorAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/frgPadding"
+                    android:layout_marginTop="@dimen/commonMarginSmall"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <CheckBox
+                        android:id="@+id/enabledCheckbox"
+                        android:scaleX="1.75"
+                        android:scaleY="1.75"
+                        android:layout_marginLeft="@dimen/commonMargin"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="@dimen/frgPadding"
+                        android:layout_height="match_parent">
+                    </CheckBox>
+
+                    <Button
+                        android:id="@+id/deleteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/asap_medium"
+                        android:gravity="center"
+                        android:letterSpacing="0"
+                        android:text="@string/deleteItem"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/smallText"
+                        style="@style/ReservesProdisRedButton"/>
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/commonMarginSmall"
+                        android:background="@drawable/button"
+                        style="@style/ReservesProdisButton"
+                        android:fontFamily="@font/asap_medium"
+                        android:gravity="center"
+                        android:letterSpacing="0"
+                        android:text="@string/saveChangesItem"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/smallText"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

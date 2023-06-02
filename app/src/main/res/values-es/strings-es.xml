@@ -1,0 +1,155 @@
+<resources>
+    <!-- Common strings -->
+    <string name="app_name">Reservas Prodis</string>
+    <string name="prodis">Prodis</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="errorGenericTitle">Error</string>
+    <string name="warningGenericTitle">Alerta</string>
+    <string name="guestName">Invitado</string>
+    <string name="genericName">Nombre</string>
+
+    <!-- Notificaciones -->
+    <string name="accDisabledTitle">Cuenta restringida</string>
+    <string name="accDisabledText">Tu cuenta ha sido deshabilitada</string>
+    <string name="accDisabledTextLong">Tu cuenta ha sido deshabilitada. Si deseas que se vuelva a habilitar, contacta con un administrador.</string>
+
+    <!-- frg_iniciar_sesion -->
+    <string name="dniTextView">DNI</string>
+    <string name="emailTextView">Email</string>
+    <string name="passwordTextView">Contraseña</string>
+    <string name="loginButton">Conectar</string>
+    <string name="guessButton">Iniciar como invitado</string>
+    <string name="register">Registrarse</string>
+    <string name="recoveryPassword">¿Has olvidado la contraseña?</string>
+
+    <!-- frg_iniciar_sesion | KT -->
+    <string name="errorDniPasswdWrong">El DNI y la contraseña no coinciden</string>
+    <string name="errorDniNotInDDBB">El DNI no está registrado en la base de datos</string>
+    <string name="errorUserDisabled">Este usuario está deshabilitado. Contacta con un administrador.</string>
+
+    <!-- activity_register | KT -->
+    <string name="errorDniInvalid">El DNI no es válido.</string>
+    <string name="errorPasswdInvalid">La contraseña tiene que ser de 4 dígitos.</string>
+    <string name="errorEmail">Este correo no es válido o ya está en uso</string>
+    <string name="errorEmailPassEmpty">Rellena todos los campos</string>
+
+    <!-- activity_recovery | KT -->
+    <string name="errorRecoveryEmailSentTitle">Mensaje enviado</string>
+    <string name="errorRecoveryEmailSent">Si el DNI coincide con el email introducido se habrá enviado correctamente un mensaje al email indicado. Sigue las instrucciones.</string>
+
+    <!-- frg_home -->
+    <string name="homeTitle">¿Qué quieres reservar?</string>
+    <string name="sala">Sala</string>
+    <string name="salasLista">Lista de salas</string>
+    <string name="vehiculo">Vehículo</string>
+    <string name="vehiculoLista">Lista de vehículos</string>
+    <string name="misReservas">Mis reservas</string>
+
+    <!-- frg_sala | KT -->
+    <string name="reserveItem">Reservar ahora</string>
+    <string name="deleteItem">Eliminar</string>
+    <string name="popupNewItemTitle">Introduce un nombre</string>
+    <string name="popupErrorNewItemTitle">El nombre no puede estar vacío y debes elegir una imagen.</string>
+    <string name="saveChangesItem">Guardar los cambios</string>
+
+    <!-- frg_vehiculo | KT | Adapter -->
+    <string name="reservaAlertTitle">Confirmar el cambio</string>
+    <string name="reservaAlertDesc">¿Deseas eliminar este vehículo?</string>
+
+    <!-- Add item dialog -->
+    <string name="dialog_nombre">Nombre</string>
+
+    <!-- frg_configuracion -->
+    <string name="configTitle">Opciones generales</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="infoApp">Información de la aplicación</string>
+    <string name="version">Versión:</string>
+    <string name="autoresLabel">Autores:</string>
+    <string name="autores">Iván Pacheco González\nRaúl Jiménez Carrillo</string>
+    <string name="de">De</string>
+    <string name="nicolau_cop_rnic_logo">Nicolau Copérnic Logo</string>
+    <string name="para">Para</string>
+    <string name="prodis_logo">Prodis Logo</string>
+
+    <!-- frg_perfil -->
+    <string name="fullName">Nombre completo</string>
+    <string name="perfil">Perfil</string>
+    <string name="phone">Teléfono</string>
+    <string name="services">Servicios</string>
+    <string name="changePassword">Cambiar la contraseña</string>
+    <string-array name="servicios">
+        <item>Cantina</item>
+        <item>Industrial</item>
+        <item>Miquel Àngel</item>
+        <item>SOI</item>
+        <item>USAP</item>
+    </string-array>
+
+    <!-- frg_perfil | KT -->
+    <string name="errorFillProfile">Rellena tu perfil antes de continuar</string>
+    <string name="errorPhoneNotCorrect">El teléfono tiene que ser de 9 dígitos</string>
+    <string name="profileSaveCorrectTitle">Cambios guardados</string>
+    <string name="profileSaveCorrect">Se han guardado los cambios</string>
+    <string name="profileImageError">Se ha producido un error al subir la imagen</string>
+
+    <!-- Dialog perfil change passwd -->
+    <string name="dialog_currentPasswd">Contraseña actual</string>
+    <string name="dialog_newPasswd">Nueva contraseña</string>
+    <string name="dialog_repeatNewPasswd">Repite la nueva contraseña</string>
+    <string name="dialog_errorPasswdDoesNotMatch">La contraseña no coincide</string>
+    <string name="dialog_genericErrorPasswd">Ha ocurrido un error al cambiar la contraseña</string>
+
+    <!-- frg_reserva_* -->
+    <string name="calendarTitle">Seleccionar fecha</string>
+    <string name="scheduleTitle">Seleccionar horas</string>
+    <string name="reserve">Reservar</string>
+    <string name="alertReserva">Debes seleccionar un horario para la reserva</string>
+
+    <!-- Item mis reservas -->
+    <string name="reserveStartTime">Hora de inicio:</string>
+    <string name="reserveEndTime">Hora de finalización:</string>
+    <string name="cancelReserve">Cancelar reserva</string>
+    <string name="reserveForAnotherMoment">Reservar para otro momento</string>
+    <string name="reserveDisabled">No disponible actualmente</string>
+
+    <string name="dialog_cancelReserve">Deseas cancelar la reserva de\u0020</string>
+
+    <!-- Array horas reservas -->
+    <string name="time09to10">09h – 10h</string>
+    <string name="time10to11">10h – 11h</string>
+    <string name="time11to12">11h – 12h</string>
+    <string name="time12to13">12h – 13h</string>
+    <string name="time14to15">14h – 15h</string>
+    <string name="time15to16">15h – 16h</string>
+    <string name="time16to17">16h – 17h</string>
+
+    <!-- frg_usuarios -->
+    <string name="AdminTitle">Adm.</string>
+    <string name="enabledTitle">Hab.</string>
+    <string name="ls_AdminTitle">Administrador</string>
+    <string name="ls_enabledTitle">Habilitado</string>
+
+    <string name="textLogo1">Reservas</string>
+    <string name="inicio">Inicia Sesión</string>
+    <string name="salas">Salas</string>
+
+    <string name="home">Menú Principal</string>
+    <string name="vehiculos">Vehículos</string>
+    <string name="reserva_sala">Reserva de sala</string>
+    <string name="reserva_vehiculo">Reserva de vehículo</string>
+    <string name="config">Configuración</string>
+
+    <string name="users">Usuarios</string>
+    <string name="recovery">Recuperar contraseña</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="logo">Logo</string>
+
+    <!-- UsuariosRecyclerView -->
+    <string name="alertTitle">Confirmar el cambio</string>
+    <string name="alertAdmin">¿Deseas asignar el rol Administrador al usuario\u0020</string>
+    <string name="alertNoAdmin">¿Deseas desasignar el rol Administrador al usuario\u0020</string>
+    <string name="alertHabilitar">¿Deseas habilitar al usuario\u0020</string>
+    <string name="alertDeshabilitar">¿Deseas deshabilitar al usuario\u0020</string>
+
+</resources>

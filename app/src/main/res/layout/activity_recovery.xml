@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/frgPadding"
+        android:paddingRight="@dimen/frgPadding"
+        tools:context=".RecoveryPassword">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:contentDescription="@string/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_icon_full"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/ic_icon_full" />
+
+        <!--  User label -->
+        <TextView
+            android:id="@+id/userTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:text="@string/dniTextView"
+            android:textColor="@color/prodis"
+            app:boxStrokeColor="@color/prodis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+            tools:ignore="TextContrastCheck" />
+
+        <!--  User input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dniTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/dniTextView"
+                android:maxLength="9"
+                android:paddingTop="@dimen/commonMarginSmall"
+                android:inputType="textNoSuggestions|textPersonName"
+                android:singleLine="true"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  Email label -->
+        <TextView
+            android:id="@+id/dniTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:text="@string/emailTextView"
+            android:textColor="@color/prodis"
+            app:boxStrokeColor="@color/prodis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userTextInputLayout"
+            tools:ignore="TextContrastCheck" />
+
+        <!--  Email input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dniTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/emailTextView"
+                android:singleLine="true"
+                android:paddingTop="@dimen/commonMarginSmall"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Register -->
+        <Button
+            android:id="@+id/acceptButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            android:textSize="@dimen/subtitle"
+            app:backgroundTint="@color/prodis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailTextInputLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/frgPadding"
+        android:paddingRight="@dimen/frgPadding"
+        tools:context=".Registrarse">
+
+        <!-- Logo -->
+
+        <!--  DNI label -->
+        <TextView
+            android:id="@+id/dniTextView"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/dniTextView"
+            android:textColor="@color/prodis"
+            app:boxStrokeColor="@color/prodis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <!--  DNI input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dniTextInputLayout"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dniTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dniTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/asap_medium"
+                android:hint="@string/dniTextView"
+                android:maxLength="9"
+                android:inputType="textNoSuggestions|textPersonName"
+                android:paddingTop="@dimen/commonMargin"
+                android:singleLine="true"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  Email label -->
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/emailTextView"
+            android:textColor="@color/prodis"
+            app:boxStrokeColor="@color/prodis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dniTextInputLayout"/>
+
+        <!--  Email input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/asap_medium"
+                android:inputType="textEmailAddress"
+                android:hint="@string/emailTextView"
+                android:paddingTop="@dimen/subtitle"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  Password label -->
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/passwordTextView"
+            android:textColor="@color/prodis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout"/>
+
+        <!--  Password input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/asap_medium"
+                android:hint="@string/passwordTextView"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:paddingTop="@dimen/subtitle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Register -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:letterSpacing="0"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textSize="@dimen/subtitle"
+            app:backgroundTint="@color/prodis"
+            app:layout_constraintBottom_toBottomOf="@+id/passwordTextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dniTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Configuracion">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutOpciones"
+            style="@style/ReservesProdisConstraintBg"
+            android:layout_width="@dimen/ls_commonWidth"
+            android:layout_height="@dimen/responsive"
+            android:layout_margin="@dimen/commonMarginSmall"
+            android:background="@drawable/rounded_corners_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Titulo Opciones -->
+            <TextView
+                android:id="@+id/configTitle"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/configTitle"
+                android:textSize="@dimen/ls_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Separador -->
+            <View
+                android:id="@+id/separador"
+                style="@style/ReservesProdisWhiteSpacer"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/configTitle" />
+
+            <!-- Notificaciones -->
+            <LinearLayout
+                android:id="@+id/linearLayoutNotificaciones"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separador">
+
+                <TextView
+                    android:id="@+id/notificaciones"
+                    style="@style/ReservesProdisWhite"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/commonMarginSmall"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/notificaciones"
+                    android:textSize="@dimen/subtitle"
+                    tools:ignore="TextContrastCheck" />
+
+                <Switch
+                    android:id="@+id/switchNoti"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml,DuplicateSpeakableTextCheck" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/infoApp"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/infoApp"
+                android:textSize="@dimen/ls_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutNotificaciones"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Separador -->
+            <View
+                android:id="@+id/separadorIdioma"
+                style="@style/ReservesProdisWhiteSpacer"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoApp" />
+
+            <!-- Versión -->
+            <LinearLayout
+                android:id="@+id/verLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separadorIdioma">
+
+                <TextView
+                    android:id="@+id/versionText"
+                    style="@style/ReservesProdisWhite"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/commonMarginSmall"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/version"
+                    android:textSize="@dimen/subtitle" />
+
+                <TextView
+                    android:id="@+id/numVersionText"
+                    style="@style/ReservesProdisWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="end"
+                    android:textSize="@dimen/subtitle" />
+            </LinearLayout>
+
+            <!-- Autores -->
+            <LinearLayout
+                android:id="@+id/autoresLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/verLayout">
+
+                <TextView
+                    android:id="@+id/autoresText"
+                    style="@style/ReservesProdisWhite"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/commonMarginSmall"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/autoresLabel"
+                    android:textSize="@dimen/subtitle"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/autores"
+                    style="@style/ReservesProdisWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="right"
+                    android:text="@string/autores"
+                    android:textSize="@dimen/subtitle" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Logos -->
+        <TextView
+            android:id="@+id/copernicLogoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/de"
+            android:textSize="@dimen/subtitle"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutOpciones"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/copernicLogo"
+            android:layout_width="@dimen/responsive"
+            android:layout_height="@dimen/avatar"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginEnd="@dimen/commonMargin"
+            android:contentDescription="@string/nicolau_cop_rnic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutOpciones"
+            app:layout_constraintTop_toBottomOf="@+id/copernicLogoText" />
+
+        <TextView
+            android:id="@+id/prodisLogoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/para"
+            android:textSize="@dimen/subtitle"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutOpciones"
+            app:layout_constraintTop_toBottomOf="@+id/copernicLogo" />
+
+        <ImageView
+            android:id="@+id/prodisLogo"
+            android:layout_width="@dimen/responsive"
+            android:layout_height="@dimen/avatar"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginEnd="@dimen/commonMargin"
+            android:contentDescription="@string/prodis_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutOpciones"
+            app:layout_constraintTop_toBottomOf="@+id/prodisLogoText"
+            app:srcCompat="@drawable/ic_prodislogo"
+            app:tint="@color/prodis" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

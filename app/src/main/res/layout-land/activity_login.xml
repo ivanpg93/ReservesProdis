@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/frgPadding"
+        android:paddingRight="@dimen/frgPadding"
+        tools:context=".LoginActivity">
+
+        <TextView
+            android:id="@+id/dniTextView"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/dniTextView"
+            android:textColor="@color/prodis"
+            app:boxStrokeColor="@color/prodis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--  Email input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/dniTextView"
+            app:layout_constraintStart_toStartOf="@+id/dniTextView"
+            app:layout_constraintTop_toBottomOf="@id/dniTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dniTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/asap_medium"
+                android:hint="@string/dniTextView"
+                android:inputType="textNoSuggestions|textPersonName"
+                android:maxLength="9"
+                android:paddingTop="@dimen/subtitle"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  Password label -->
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/passwordTextView"
+            android:textColor="@color/prodis"
+            app:layout_constraintEnd_toEndOf="@+id/emailTextInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/emailTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextInputLayout" />
+
+        <!--  Password input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="@dimen/inputHeight"
+            app:boxStrokeColor="@color/prodis"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/passwordTextView"
+            app:layout_constraintStart_toStartOf="@+id/passwordTextView"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:fontFamily="@font/asap_medium"
+                android:hint="@string/passwordTextView"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:paddingTop="@dimen/subtitle"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Log in -->
+        <Button
+            android:id="@+id/connectButton"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/loginButton"
+            android:textAllCaps="false"
+            android:textSize="@dimen/ls_subtitle"
+            app:backgroundTint="@color/azul"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/emailTextInputLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Guest -->
+        <Button
+            android:id="@+id/guestButton"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:text="@string/guessButton"
+            android:textAllCaps="false"
+            android:textSize="@dimen/ls_subtitle"
+            app:backgroundTint="@color/prodis"
+            app:layout_constraintEnd_toEndOf="@+id/connectButton"
+            app:layout_constraintStart_toStartOf="@+id/connectButton"
+            app:layout_constraintTop_toBottomOf="@+id/connectButton"
+            tools:ignore="MissingConstraints,TextContrastCheck" />
+
+        <!-- Register -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textSize="@dimen/ls_subtitle"
+            app:backgroundTint="@color/prodis"
+            app:layout_constraintEnd_toEndOf="@+id/guestButton"
+            app:layout_constraintStart_toStartOf="@+id/guestButton"
+            app:layout_constraintTop_toBottomOf="@+id/guestButton"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- Recover password -->
+        <Button
+            android:id="@+id/passwordRecoverButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/responsive"
+            android:text="@string/recoveryPassword"
+            android:textColor="@color/gray"
+            app:backgroundTint="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

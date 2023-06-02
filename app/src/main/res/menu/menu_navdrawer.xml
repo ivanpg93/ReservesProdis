@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/principal"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/salas"
+            android:icon="@drawable/ic_door"
+            android:title="@string/salas" />
+        <item
+            android:id="@+id/vehiculos"
+            android:icon="@drawable/ic_car2"
+            android:title="@string/vehiculos" />
+        <item
+            android:id="@+id/reservas"
+            android:icon="@drawable/ic_checklist"
+            android:title="@string/misReservas" />
+        <item
+            android:id="@+id/perfil"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/perfil" />
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/usuarios"
+            android:icon="@drawable/ic_users"
+            android:title="@string/users" />
+        <item
+            android:id="@+id/configuracion"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/config" />
+        <item
+            android:id="@+id/iniciarSesion"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout"/>
+    </group>
+</menu>

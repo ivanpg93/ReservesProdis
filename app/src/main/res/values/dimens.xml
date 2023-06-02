@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common values -->
+    <dimen name="responsive">0dp</dimen>
+    <dimen name="commonWidth">300dp</dimen>
+    <dimen name="commonHeight">48dp</dimen>
+    <dimen name="roundedCorners">10dp</dimen>
+    <dimen name="checkBox">30dp</dimen>
+
+    <dimen name="avatar">125dp</dimen>
+
+    <dimen name="title">28sp</dimen>
+    <dimen name="subtitle">20sp</dimen>
+    <dimen name="smallText">16sp</dimen>
+
+    <dimen name="inputHeight">48dp</dimen>
+
+    <dimen name="iconWidthAndHeight">35dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="commonMargin">20dp</dimen>
+    <dimen name="commonMarginSmall">10dp</dimen>
+
+    <!-- Paddings -->
+    <dimen name="frgPadding">50dp</dimen>
+
+    <!-- Login-->
+    <dimen name="logoTextSize">18sp</dimen>
+    <dimen name="logoTextMarginTop">5dp</dimen>
+    <dimen name="logoTextMargin">2dp</dimen>
+
+    <!-- Home-->
+    <dimen name="logoSize">175sp</dimen>
+    <dimen name="logoSizeSmall">75sp</dimen>
+
+    <!-- Landscape variatiosn -->
+    <dimen name="ls_title">24sp</dimen>
+    <dimen name="ls_subtitle">18sp</dimen>
+    <dimen name="ls_smallText">14sp</dimen>
+
+    <!-- LS Home-->
+    <dimen name="ls_logoSize">150sp</dimen>
+    <dimen name="ls_commonWidth">400dp</dimen>
+    <dimen name="ls_avatar">250dp</dimen>
+</resources>

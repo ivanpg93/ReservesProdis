@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Common colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#d2dae2</color>
+    <color name="grayDarker">#9FA8B1</color>
+    <color name="grayDarkerAlt">#5C5F61</color>
+    <color name="transparent">#00000000</color>
+    <color name="prodis">#00bfaf</color>
+    <color name="prodis_form">#58cfc6</color>
+    <color name="prodis_light">#5ef2e1</color>
+    <color name="naranja">#ffc956</color>
+    <color name="azul">#3d8af7</color>
+    <color name="btn_verde">#92d36e</color>
+    <color name="btn_rojo">#ff6357</color>
+    <color name="btn_rojo_alt">#b70f0a</color>
+
+    <color name="deshabilitado">#c0c0c0</color>
+    <color name="iconTransparency">#1E000000</color>
+
+    <!-- Dark theme -->
+    <color name="dt_prodis">#5ba7a1</color>
+    <color name="dt_white">#303030</color>
+    <color name="dt_grey">#232323</color>
+    <color name="dt_naranja">#d1af64</color>
+    <color name="dt_naranja_dark">#A57C24</color>
+    <color name="dt_azul">#718fbc</color>
+    <color name="dt_azul_dark">#3160A6</color>
+    <color name="dt_btn_verde">#7a936b</color>
+    <color name="dt_btn_rojo">#ae6561</color>
+
+    <!-- Sobreescribe el color de la barra inferior de los text inputs -->
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/prodis</color>
+</resources>

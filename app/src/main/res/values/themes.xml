@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ReservesProdis" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/prodis</item>
+        <item name="colorPrimaryVariant">@color/prodis</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/prodis_form</item>
+        <item name="colorSecondaryVariant">@color/prodis_form</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- Blancos -->
+    <style name="ReservesProdisWhite" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:tint">@color/white</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="android:buttonTint">@color/white</item>
+    </style>
+    <!-- Separador blanco -->
+    <style name="ReservesProdisWhiteSpacer" parent="Theme.ReservesProdis">
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- Negros -->
+    <style name="ReservesProdisBlack" parent="Theme.ReservesProdis">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!-- Botones Normales -->
+    <style name="ReservesProdisButton" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/prodis_form</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/prodis_form</item>
+        <item name="backgroundTint">@color/prodis_form</item>
+    </style>
+    <!-- Botones verdes -->
+    <style name="ReservesProdisGreenButton" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/btn_verde</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/btn_verde</item>
+        <item name="backgroundTint">@color/btn_verde</item>
+    </style>
+    <!-- Botones Rojos -->
+    <style name="ReservesProdisRedButton" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/btn_rojo</item>
+        <item name="backgroundTint">@color/btn_rojo</item>
+    </style>
+    <!-- Constraint backgorund -->
+    <style name="ReservesProdisConstraintBg" parent="Theme.ReservesProdis">
+        <item name="android:backgroundTint">@color/prodis_form</item>
+    </style>
+    <style name="ReservesProdisGreen" parent="Theme.ReservesProdis">
+        <item name="android:backgroundTint">@color/btn_verde</item>
+    </style>
+    <!-- Salas -->
+    <style name="ReservesProdisSalas" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/naranja</item>
+        <item name="cardBackgroundColor">@color/naranja</item>
+        <item name="backgroundTint">@color/naranja</item>
+        <item name="android:backgroundTint">@color/naranja</item>
+    </style>
+    <!-- Vehiculos -->
+    <style name="ReservesProdisVehiculos" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/azul</item>
+        <item name="cardBackgroundColor">@color/azul</item>
+        <item name="backgroundTint">@color/azul</item>
+        <item name="android:backgroundTint">@color/azul</item>
+    </style>
+    <!-- Splash Screen -->
+    <style name="Theme.CustomSplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_full</item>
+        <item name="postSplashScreenTheme">@style/Theme.ReservesProdis</item>
+    </style>
+    <!-- End Splash Screen -->
+    <!-- Calendario -->
+    <!-- Salas Calendar -->
+    <style name="CalenderViewSalas" parent="Theme.AppCompat">
+        <!-- Color circulo seleccion y día actual -->
+        <item name="colorAccent">@color/dt_naranja_dark</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    <!-- Vehiculos Calendar -->
+    <style name="CalenderViewVehiculos" parent="Theme.AppCompat">
+        <!-- Color circulo seleccion y día actual -->
+        <item name="colorAccent">@color/dt_azul_dark</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    <style name="CalenderViewText" parent="Theme.AppCompat">
+        <!-- Color días -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- End Calendario -->
+</resources>

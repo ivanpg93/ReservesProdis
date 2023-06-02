@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/commonMarginSmall"
+        android:paddingEnd="@dimen/commonMarginSmall"
+        android:paddingBottom="@dimen/commonMarginSmall"
+        android:paddingTop="@dimen/responsive"
+        tools:context=".Home">
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/homeTitle"
+            android:textSize="@dimen/ls_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="@dimen/responsive"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeTitle">
+
+            <View android:id="@+id/strut"
+                android:layout_width="@dimen/responsive"
+                android:layout_height="@dimen/responsive"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- CardView Salas -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/salasCardView"
+                style="@style/ReservesProdisSalas"
+                android:layout_width="@dimen/responsive"
+                android:layout_alignRight="@id/strut"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/logoTextMarginTop"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/commonMarginSmall"
+                card_view:cardCornerRadius="@dimen/roundedCorners">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/commonMarginSmall">
+
+                    <TextView
+                        android:id="@+id/titleSalas"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/sala"
+                        android:textSize="@dimen/title"
+                        tools:ignore="TextContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/bigIconSalas"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ls_logoSize"
+                        android:contentDescription="@string/salasLista"
+                        app:srcCompat="@drawable/ic_door"/>
+
+                    <View
+                        style="@style/ReservesProdisWhiteSpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/ls_logoSize" />
+
+                    <ImageView
+                        android:id="@+id/listaSalasIcon"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/frgPadding"
+                        android:layout_marginTop="@dimen/ls_logoSize"
+                        app:srcCompat="@drawable/ic_checklist2"/>
+
+                    <TextView
+                        android:id="@+id/lisaSalasText"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/frgPadding"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="@dimen/ls_logoSize"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/salasLista"
+                        android:textSize="@dimen/ls_title"
+                        tools:ignore="RtlHardcoded,TextContrastCheck" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView Furgos -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vehiculosCardView"
+                style="@style/ReservesProdisVehiculos"
+                android:layout_width="@dimen/responsive"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/commonMarginSmall"
+                android:layout_marginLeft="@dimen/logoTextMarginTop"
+                android:layout_alignLeft="@id/strut"
+                android:layout_alignParentRight="true"
+                app:layout_constraintTop_toBottomOf="@id/salasCardView"
+                card_view:cardCornerRadius="@dimen/roundedCorners">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/commonMarginSmall">
+
+                    <TextView
+                        android:id="@+id/titleVehiculos"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/vehiculo"
+                        android:textSize="@dimen/title"
+                        tools:ignore="TextContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/bigIconVehiculos"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ls_logoSize"
+                        android:contentDescription="@string/salasLista"
+                        app:srcCompat="@drawable/ic_car2"/>
+
+                    <View
+                        style="@style/ReservesProdisWhiteSpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/ls_logoSize" />
+
+                    <ImageView
+                        android:id="@+id/listaVehiculosIcon"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/frgPadding"
+                        android:layout_marginTop="@dimen/ls_logoSize"
+                        app:srcCompat="@drawable/ic_checklist2"/>
+
+                    <TextView
+                        android:id="@+id/listaVehiculosText"
+                        style="@style/ReservesProdisWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/frgPadding"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="@dimen/ls_logoSize"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/vehiculoLista"
+                        android:textSize="@dimen/ls_title"
+                        tools:ignore="RtlHardcoded,TextContrastCheck" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <!-- Mis reservas -->
+        <Button
+            android:id="@+id/misReservas"
+            style="@style/ReservesProdisButton"
+            android:layout_width="@dimen/commonWidth"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:text="@string/misReservas"
+            android:textAllCaps="false"
+            android:textSize="@dimen/ls_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

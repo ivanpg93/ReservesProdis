@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/commonMarginSmall"
+        tools:context=".Home">
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/homeTitle"
+            android:textSize="@dimen/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- CardView Salas -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/salasCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            style="@style/ReservesProdisSalas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeTitle"
+            card_view:cardCornerRadius="@dimen/roundedCorners">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/commonMarginSmall">
+
+                <TextView
+                    android:id="@+id/titleSalas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/sala"
+                    style="@style/ReservesProdisWhite"
+                    android:textSize="@dimen/title"
+                    tools:ignore="TextContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/bigIconSalas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logoSize"
+                    android:contentDescription="@string/salasLista"
+                    style="@style/ReservesProdisWhite"
+                    app:srcCompat="@drawable/ic_door"
+                    tools:ignore="UseAppTint,ImageContrastCheck" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/logoSize"
+                    style="@style/ReservesProdisWhiteSpacer" />
+
+                <ImageView
+                    android:id="@+id/listaSalasIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/frgPadding"
+                    android:layout_marginTop="@dimen/logoSize"
+                    style="@style/ReservesProdisWhite"
+                    app:srcCompat="@drawable/ic_checklist2"
+                    tools:ignore="ContentDescription,UseAppTint,ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/lisaSalasText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/frgPadding"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="@dimen/logoSize"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/salasLista"
+                    style="@style/ReservesProdisWhite"
+                    android:textSize="@dimen/title"
+                    tools:ignore="RtlHardcoded,TextContrastCheck" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView Furgos -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/vehiculosCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            style="@style/ReservesProdisVehiculos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salasCardView"
+            card_view:cardCornerRadius="@dimen/roundedCorners">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/commonMarginSmall">
+
+                <TextView
+                    android:id="@+id/titleVehiculos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/vehiculo"
+                    style="@style/ReservesProdisWhite"
+                    android:textSize="@dimen/title"
+                    tools:ignore="TextContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/bigIconVehiculos"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logoSize"
+                    style="@style/ReservesProdisWhite"
+                    android:contentDescription="@string/salasLista"
+                    app:srcCompat="@drawable/ic_car2"
+                    tools:ignore="UseAppTint,ImageContrastCheck" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/logoSize"
+                    style="@style/ReservesProdisWhiteSpacer" />
+
+                <ImageView
+                    android:id="@+id/listaVehiculosIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/frgPadding"
+                    android:layout_marginTop="@dimen/logoSize"
+                    style="@style/ReservesProdisWhite"
+                    app:srcCompat="@drawable/ic_checklist2"
+                    tools:ignore="ContentDescription,UseAppTint,ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/listaVehiculosText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/frgPadding"
+                    android:layout_marginLeft="100dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/logoSize"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/vehiculoLista"
+                    style="@style/ReservesProdisWhite"
+                    android:textSize="@dimen/title"
+                    tools:ignore="RtlHardcoded,TextContrastCheck" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Mis reservas -->
+        <Button
+            android:id="@+id/misReservas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMarginSmall"
+            android:background="@drawable/button"
+            style="@style/ReservesProdisButton"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="@string/misReservas"
+            android:textAllCaps="false"
+            android:textSize="@dimen/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vehiculosCardView"
+            tools:ignore="TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

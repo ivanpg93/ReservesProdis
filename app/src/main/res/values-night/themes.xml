@@ -1,0 +1,99 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ReservesProdis" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/prodis</item>
+        <item name="colorPrimaryVariant">@color/prodis</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/prodis_form</item>
+        <item name="colorSecondaryVariant">@color/prodis_form</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- Splash Screen -->
+    <style name="Theme.CustomSplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_full</item>
+        <item name="postSplashScreenTheme">@style/Theme.ReservesProdis</item>
+    </style>
+    <!-- End Splash Screen -->
+    <!-- Blancos -->
+    <style name="ReservesProdisWhite" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/dt_white</item>
+        <item name="android:textColor">@color/dt_white</item>
+        <item name="cardBackgroundColor">@color/dt_white</item>
+        <item name="backgroundTint">@color/dt_white</item>
+        <item name="android:tint">@color/dt_white</item>
+        <item name="drawableTint">@color/dt_white</item>
+        <item name="android:buttonTint">@color/dt_white</item>
+    </style>
+    <!-- Separador blanco -->
+    <style name="ReservesProdisWhiteSpacer" parent="Theme.ReservesProdis">
+        <item name="android:background">@color/dt_white</item>
+    </style>
+    <!-- Negros -->
+    <style name="ReservesProdisBlack" parent="Theme.ReservesProdis">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- Botones Normales -->
+    <style name="ReservesProdisButton" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/dt_prodis</item>
+        <item name="android:textColor">@color/dt_white</item>
+        <item name="cardBackgroundColor">@color/dt_prodis</item>
+        <item name="backgroundTint">@color/dt_prodis</item>
+    </style>
+    <!-- Botones verdes -->
+    <style name="ReservesProdisGreenButton" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/btn_verde</item>
+        <item name="android:textColor">@color/dt_white</item>
+        <item name="backgroundTint">@color/dt_btn_verde</item>
+    </style>
+    <!-- Botones Rojos -->
+    <style name="ReservesProdisRedButton" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/dt_btn_rojo</item>
+        <item name="android:textColor">@color/dt_white</item>
+        <item name="backgroundTint">@color/dt_btn_rojo</item>
+    </style>
+    <!-- Constraint backgorund -->
+    <style name="ReservesProdisConstraintBg" parent="Theme.ReservesProdis">
+        <item name="android:backgroundTint">@color/dt_prodis</item>
+    </style>
+    <style name="ReservesProdisGreen" parent="Theme.ReservesProdis">
+        <item name="android:backgroundTint">@color/dt_btn_verde</item>
+    </style>
+    <!-- Salas -->
+    <style name="ReservesProdisSalas" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/dt_naranja</item>
+        <item name="cardBackgroundColor">@color/dt_naranja</item>
+        <item name="backgroundTint">@color/dt_naranja</item>
+        <item name="android:backgroundTint">@color/dt_naranja</item>
+    </style>
+    <!-- Vehiculos -->
+    <style name="ReservesProdisVehiculos" parent="Theme.ReservesProdis">
+        <item name="colorPrimary">@color/dt_azul</item>
+        <item name="cardBackgroundColor">@color/dt_azul</item>
+        <item name="backgroundTint">@color/dt_azul</item>
+        <item name="android:backgroundTint">@color/dt_azul</item>
+    </style>
+    <!-- Calendario -->
+    <!-- Salas Calendar -->
+    <style name="CalenderViewSalas" parent="Theme.AppCompat">
+        <!-- Color circulo seleccion y día actual -->
+        <item name="colorAccent">@color/dt_naranja_dark</item>
+        <item name="android:textColorPrimary">@color/dt_white</item>
+    </style>
+    <!-- Vehiculos Calendar -->
+    <style name="CalenderViewVehiculos" parent="Theme.AppCompat">
+        <!-- Color circulo seleccion y día actual -->
+        <item name="colorAccent">@color/dt_azul_dark</item>
+        <item name="android:textColorPrimary">@color/dt_white</item>
+    </style>
+    <style name="CalenderViewText" parent="Theme.AppCompat">
+        <!-- Color días -->
+        <item name="android:textColor">@color/dt_white</item>
+    </style>
+    <!-- End Calendario -->
+</resources>

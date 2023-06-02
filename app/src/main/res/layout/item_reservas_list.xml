@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/commonMarginSmall"
+        style="@style/ReservesProdisSalas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:cardCornerRadius="@dimen/roundedCorners">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardViewConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:paddingRight="@dimen/commonMarginSmall"
+            android:paddingLeft="@dimen/commonMarginSmall">
+
+            <TextView
+                android:id="@+id/titleReserva"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintBottom_toTopOf="@+id/div"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardViewConstraint" />
+
+            <TextView
+                android:id="@+id/titleFecha"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/commonMarginSmall"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="end"
+                android:textSize="@dimen/subtitle"
+                app:layout_constraintBottom_toTopOf="@+id/div"
+                app:layout_constraintEnd_toStartOf="@+id/collapsableIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/collapsableIcon"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="@dimen/frgPadding"
+                android:layout_height="@dimen/frgPadding"
+                android:background="@drawable/bg_spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/collapsableIcon">
+
+                <View
+                    android:id="@+id/separador"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    style="@style/ReservesProdisWhiteSpacer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:id="@+id/inicioLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/commonMarginSmall"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/separador">
+
+                    <TextView
+                        android:id="@+id/horaInicioTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/reserveStartTime"
+                        style="@style/ReservesProdisWhite"
+                        android:textSize="@dimen/subtitle" />
+
+                    <TextView
+                        android:id="@+id/horaFinalTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/reserveEndTime"
+                        style="@style/ReservesProdisWhite"
+                        android:textSize="@dimen/subtitle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finalLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/commonMarginSmall"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/commonMarginSmall"
+                    app:layout_constraintStart_toEndOf="@+id/inicioLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/separador">
+
+                    <TextView
+                        android:id="@+id/horaInicio"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        style="@style/ReservesProdisWhite"
+                        android:textSize="@dimen/subtitle"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/horaFinal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        style="@style/ReservesProdisWhite"
+                        android:textSize="@dimen/subtitle"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </LinearLayout>
+                <!-- Botón Cancelar reserva -->
+                <Button
+                    android:id="@+id/reservaCancelButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/commonMarginSmall"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/asap_medium"
+                    android:letterSpacing="0"
+                    android:text="@string/cancelReserve"
+                    android:textAllCaps="false"
+                    style="@style/ReservesProdisRedButton"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #00bfaf;
+      }
+
+      .cls-1, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 51px;
+        text-anchor: middle;
+        font-family: Asap;
+        font-weight: 500;
+      }
+
+      .cls-3 {
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        fill-opacity: 0.65;
+        opacity: 0.32;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-5, .cls-6 {
+        fill: #edfaf7;
+      }
+
+      .cls-5 {
+        filter: url(#filter);
+      }
+
+      .cls-6 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1166.879" y1="120.75" x2="1327.001" y2="377" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#040800"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <filter id="filter" x="1124" y="133" width="249" height="209" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="7" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-opacity="0.16"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="1083" y="72" width="188" height="209" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="7" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feFlood result="flood" flood-opacity="0.16"/>
+      <feComposite result="composite-4" operator="in" in2="composite-3"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Full_Icon" data-name="Full Icon">
+    <path id="BG" class="cls-1" d="M1105.96,42.96h224.08a55,55,0,0,1,55,55V322.04a55,55,0,0,1-55,55H1105.96a55,55,0,0,1-55-55V97.96A55,55,0,0,1,1105.96,42.96Z" transform="translate(-968)"/>
+    <text id="Reserves_Prodis" data-name="Reserves Prodis" class="cls-2" x="248.112" y="457.865">Reserves <tspan class="cls-3">Prodis</tspan></text>
+    <path id="Sombra_copia_2" data-name="Sombra copia 2" class="cls-4" d="M1237,377L1108.89,251.769l126.96-1.628,6.51-129.4L1385,261v68s-2.5,17.552-16,31a66.687,66.687,0,0,1-31,17H1237Z" transform="translate(-968)"/>
+    <path id="Icon_copia_2" data-name="Icon copia 2" class="cls-5" d="M1146.39,250.416l-0.16,21.943a15.259,15.259,0,0,0,15.26,15.258h5.08a30.52,30.52,0,0,0,61.04,0h40.69a30.52,30.52,0,0,0,61.04,0h15.25a5.1,5.1,0,0,0,5.09-5.086V272.359a5.1,5.1,0,0,0-5.09-5.087h-5.08V232.908a15.263,15.263,0,0,0-4.48-10.777l-31.76-31.757a15.261,15.261,0,0,0-10.78-4.482h-14.02V170.633a15.26,15.26,0,0,0-15.26-15.259l-23.22.242c0.14,0,0,94.8,0,94.8S1146.79,249.854,1146.39,250.416Zm50.7,52.46a15.259,15.259,0,1,1,15.26-15.259A15.266,15.266,0,0,1,1197.09,302.876Zm101.73,0a15.259,15.259,0,1,1,15.26-15.259A15.26,15.26,0,0,1,1298.82,302.876Zm25.43-66.121h-45.78v-35.6h14.02l31.76,31.757v3.847Z" transform="translate(-968)"/>
+    <path id="Icon_copia" data-name="Icon copia" class="cls-6" d="M1152.18,185.887a3.821,3.821,0,0,0,3.81-3.815V169.357a3.821,3.821,0,0,0-3.81-3.815h-12.72a3.821,3.821,0,0,0-3.81,3.815v12.715a3.821,3.821,0,0,0,3.81,3.815h12.72Zm34.33-3.815V169.357a3.827,3.827,0,0,0-3.81-3.815h-12.72a3.83,3.83,0,0,0-3.82,3.815v12.715a3.83,3.83,0,0,0,3.82,3.815h12.72A3.827,3.827,0,0,0,1186.51,182.072Zm30.52,0V169.357a3.83,3.83,0,0,0-3.82-3.815H1200.5a3.83,3.83,0,0,0-3.82,3.815v12.715a3.83,3.83,0,0,0,3.82,3.815h12.71A3.83,3.83,0,0,0,1217.03,182.072Zm-30.52,30.518V199.874a3.827,3.827,0,0,0-3.81-3.814h-12.72a3.829,3.829,0,0,0-3.82,3.814V212.59a3.83,3.83,0,0,0,3.82,3.815h12.72A3.827,3.827,0,0,0,1186.51,212.59Zm-30.52,0V199.874a3.821,3.821,0,0,0-3.81-3.814h-12.72a3.821,3.821,0,0,0-3.81,3.814V212.59a3.821,3.821,0,0,0,3.81,3.815h12.72A3.821,3.821,0,0,0,1155.99,212.59Zm61.04,0V199.874a3.829,3.829,0,0,0-3.82-3.814H1200.5a3.829,3.829,0,0,0-3.82,3.814V212.59a3.83,3.83,0,0,0,3.82,3.815h12.71A3.83,3.83,0,0,0,1217.03,212.59Zm30.52-82.652a15.267,15.267,0,0,0-15.26-15.259h-15.26V98.149a3.829,3.829,0,0,0-3.82-3.815H1200.5a3.829,3.829,0,0,0-3.82,3.815v16.53h-40.69V98.149a3.821,3.821,0,0,0-3.81-3.815h-12.72a3.821,3.821,0,0,0-3.81,3.815v16.53h-15.26a15.26,15.26,0,0,0-15.26,15.259v111.9a15.26,15.26,0,0,0,15.26,15.259h111.9a15.266,15.266,0,0,0,15.26-15.259v-111.9Zm-15.26,109.991a1.914,1.914,0,0,1-1.91,1.907H1122.3a1.914,1.914,0,0,1-1.91-1.907V145.2h111.9v94.732Z" transform="translate(-968)"/>
+  </g>
+</svg>

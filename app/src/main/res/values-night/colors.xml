@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Common colors -->
+    <color name="black">#FF000000</color>
+    <color name="prodis_form">#7BAEAA</color>
+    <color name="prodis_light">#A1CDC8</color>
+    <color name="naranja">#d1af64</color>
+    <color name="azul">#718fbc</color>
+    <color name="btn_verde">#7a936b</color>
+    <color name="btn_rojo">#ae6561</color>
+    <color name="btn_rojo_alt">#743432</color>
+</resources>

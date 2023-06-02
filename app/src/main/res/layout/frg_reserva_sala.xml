@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/commonMarginSmall"
+        tools:context=".ReservaSala">
+
+        <!-- Botón Cerrar Sessión -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutUsers"
+            style="@style/ReservesProdisSalas"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/responsive"
+            android:layout_marginBottom="@dimen/commonMarginSmall"
+            android:background="@drawable/rounded_corners_layout"
+            app:layout_constraintBottom_toTopOf="@+id/reservarButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Titulo -->
+            <TextView
+                android:id="@+id/title"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/calendarTitle"
+                android:textSize="@dimen/title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Separador -->
+            <View
+                android:id="@+id/separador"
+                style="@style/ReservesProdisWhiteSpacer"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <!-- Calendario -->
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dateTextAppearance="@style/CalenderViewText"
+                android:theme="@style/CalenderViewSalas"
+                android:weekDayTextAppearance="@style/CalenderViewText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <!-- Titulo -->
+            <TextView
+                android:id="@+id/titleHorario"
+                style="@style/ReservesProdisWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/scheduleTitle"
+                android:textSize="@dimen/title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/calendarView"
+                tools:ignore="TextContrastCheck" />
+
+            <View
+                android:id="@+id/separadorHorarioTitle"
+                style="@style/ReservesProdisWhiteSpacer"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleHorario" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstraintLayoutHorario"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/responsive"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separadorHorarioTitle">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMorning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout09to10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/commonMarginSmall"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox09To10"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView09to10"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/avatar"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time09to10"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout10to11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/commonMarginSmall"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox10to11"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView10to11"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="125dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time10to11"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout11to12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/commonMarginSmall"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox11to12"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView11to12"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/avatar"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time11to12"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout12to13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox12to13"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView12to13"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/avatar"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time12to13"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutAfternoon"
+                    android:layout_width="@dimen/responsive"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayoutMorning"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout14to15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/commonMarginSmall"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox14to15"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView14to15"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/avatar"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time14to15"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout15to16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/commonMarginSmall"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox15to16"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView15to16"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/avatar"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time15to16"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout16to17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox16to17"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/checkBox"
+                            android:layout_height="@dimen/checkBox"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <TextView
+                            android:id="@+id/textView16to17"
+                            style="@style/ReservesProdisWhite"
+                            android:layout_width="@dimen/avatar"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/commonMarginSmall"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center|center_vertical"
+                            android:text="@string/time16to17"
+                            android:textSize="@dimen/subtitle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/reservarButton"
+            style="@style/ReservesProdisWhite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/responsive"
+            android:background="@drawable/button"
+            android:fontFamily="@font/asap_medium"
+            android:gravity="center"
+            android:text="@string/reserve"
+            android:textAllCaps="false"
+            android:textSize="@dimen/subtitle"
+            app:backgroundTint="@color/btn_verde"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

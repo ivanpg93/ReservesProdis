@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "710600765812",
+    "project_id": "reserves-prodis",
+    "storage_bucket": "reserves-prodis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710600765812:android:cf458196cf70dd72743c21",
+        "android_client_info": {
+          "package_name": "cat.copernic.prodis.reservesprodis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710600765812-540rhuneds3vc4frt642iu6rbltnue5v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.copernic.prodis.reservesprodis",
+            "certificate_hash": "c15266ce218ea64ec881b1a4cceb446b25b55dea"
+          }
+        },
+        {
+          "client_id": "710600765812-51cf9ppej25qo1ksdarqgpncmcge9jbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSO7HJOch0zZ2WT1PXbmwpe6c9vHu6Sps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710600765812-51cf9ppej25qo1ksdarqgpncmcge9jbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

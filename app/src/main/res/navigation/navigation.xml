@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/principal">
+
+    <fragment
+        android:id="@+id/principal"
+        android:name="cat.copernic.prodis.reservesprodis.Home"
+        android:label="@string/home"
+        tools:layout="@layout/frg_home" >
+        <action
+            android:id="@+id/action_principal_to_misReservas"
+            app:destination="@id/reservas" />
+        <action
+            android:id="@+id/action_principal_to_vehiculos"
+            app:destination="@id/vehiculos" />
+        <action
+            android:id="@+id/action_principal_to_salas"
+            app:destination="@id/salas" />
+        <action
+            android:id="@+id/action_principal_to_perfil"
+            app:destination="@id/perfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracion"
+        android:name="cat.copernic.prodis.reservesprodis.Configuracion"
+        android:label="@string/config"
+        tools:layout="@layout/frg_configuracion" >
+        <action
+            android:id="@+id/action_configuracion_to_perfil"
+            app:destination="@id/perfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfil"
+        android:name="cat.copernic.prodis.reservesprodis.Perfil"
+        android:label="@string/perfil"
+        tools:layout="@layout/frg_perfil" >
+    </fragment>
+    <fragment
+        android:id="@+id/reservas"
+        android:name="cat.copernic.prodis.reservesprodis.Reservas"
+        android:label="@string/misReservas"
+        tools:layout="@layout/frg_reservas" >
+        <action
+            android:id="@+id/action_reservas_to_perfil"
+            app:destination="@id/perfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservaSala"
+        android:name="cat.copernic.prodis.reservesprodis.ReservaSala"
+        android:label="@string/reserva_sala"
+        tools:layout="@layout/frg_reserva_sala" >
+        <action
+            android:id="@+id/action_reservaSala_to_misReservas"
+            app:destination="@id/reservas" />
+        <argument
+            android:name="argSala"
+            app:argType="string" />
+        <argument
+            android:name="argSalaName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservaVehiculo"
+        android:name="cat.copernic.prodis.reservesprodis.ReservaVehiculo"
+        android:label="@string/reserva_vehiculo"
+        tools:layout="@layout/frg_reserva_vehiculo" >
+        <action
+            android:id="@+id/action_reservaVehiculo_to_misReservas"
+            app:destination="@id/reservas" />
+        <argument
+            android:name="argVehiculo"
+            app:argType="string" />
+        <argument
+            android:name="argVehiculoName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/salas"
+        android:name="cat.copernic.prodis.reservesprodis.Salas"
+        android:label="@string/salas"
+        tools:layout="@layout/frg_salas" >
+        <action
+            android:id="@+id/action_salas_to_reservaSala"
+            app:destination="@id/reservaSala" />
+        <action
+            android:id="@+id/action_salas_to_perfil"
+            app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_salas_self"
+            app:destination="@id/salas" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehiculos"
+        android:name="cat.copernic.prodis.reservesprodis.Vehiculos"
+        android:label="@string/vehiculos"
+        tools:layout="@layout/frg_recyclerView" >
+        <action
+            android:id="@+id/action_vehiculos_to_reservaVehiculo"
+            app:destination="@id/reservaVehiculo" />
+        <action
+            android:id="@+id/action_vehiculos_to_perfil"
+            app:destination="@id/perfil" />
+        <action
+            android:id="@+id/action_vehiculos_self"
+            app:destination="@id/vehiculos" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuarios"
+        android:name="cat.copernic.prodis.reservesprodis.Usuarios"
+        android:label="@string/users"
+        tools:layout="@layout/frg_usuarios" />
+</navigation>
