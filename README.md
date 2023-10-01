@@ -1,12 +1,12 @@
 # ReservesProdis
- <p>APP Android de la <a href="https://prodis.cat/">Fundación Prodis de Terrassa</a></p>
+ <p>APP Android para la <a href="https://prodis.cat/">Fundación Prodis</a> en colaboración con el <a href="https://copernic.cat/">Institut Nicolau Copèrnic</a></p>
  <br>
  <p>
   <img src="https://github.com/ivanpg93/ReservesProdis/blob/main/bannerGooglePlay.png" />
  </p>
 
  # Descarga la APP para Android
- <p><a href="https://play.google.com/store/apps/details?id=cat.copernic.prodis.reservesprodis">Puedes descargarla aquí, desde la Google Play Store</p>
+ <p><a href="https://play.google.com/store/apps/details?id=cat.copernic.prodis.reservesprodis">-> Puedes descargarla aquí, desde la Google Play Store <-</p>
 
  # Tecnologías y librerías utilizadas
  <p>· Lenguaje <b>KOTLIN</b> y <b>ANDROID STUDIO</b></p>
