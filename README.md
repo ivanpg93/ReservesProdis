@@ -9,10 +9,11 @@
  <p><a href="https://play.google.com/store/apps/details?id=cat.copernic.prodis.reservesprodis">-> Puedes descargarla aquí, desde la Google Play Store <-</p>
 
  # Tecnologías y librerías utilizadas
- <p>· Lenguaje <b>KOTLIN</b> y <b>ANDROID STUDIO</b></p>
- <p>· Arquitectura <b>MVVM</b> con <b>VIEWMODEL</b> y <b>LIVEDATA</b></p>
- <p>· Icono personalizado y la implementación de un <b>SPLASH SCREEN</b>.
- <p>· Autenticación y Database con <b>FIREBASE AUTHENTICATION</b> y <b>CLOUD FIRESTORE</b>.</p>
+ <p>· Lenguaje <b>KOTLIN</b> y <b>ANDROID STUDIO</b>.</p>
+ <p>· Arquitectura <b>MVVM</b> con <b>VIEWMODEL</b> y <b>LIVEDATA</b>.</p>
+ <p>· <b>CLEAN ARCHITECTURE</b> para una mejor visualización del código.</p>
+ <p>· Icono personalizado y la implementación de un <b>SPLASH SCREEN</b>.</p>
+ <p>· Autenticación con <b>FIREBASE AUTHENTICATION</b> y persistencia de datos con <b>CLOUD FIRESTORE</b>.</p>
  <p>· <b>RECYCLERVIEWS</b> para mostrar las salas y furgonetas, así como las reservas de cada usuario.</p>
  <p>· Notificaciones push para recordatorios con <b>CLOUD MESSAGING</b>.</p>
  
